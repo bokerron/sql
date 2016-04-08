@@ -2,8 +2,8 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `vacacionesAntiguasSimpleMejorada`(a
 BEGIN     
 declare idPais int;
 
-SET			 SQL_SAFE_UPDATES = 0;
-UPDATE 		 vacaciones
+SET			  SQL_SAFE_UPDATES = 0;
+UPDATE 		   vacaciones
 SET          diasExcedidos=NULL,
              diasRestantes=NULL WHERE estado
              IN ('Rechazadas','Canceladas');
