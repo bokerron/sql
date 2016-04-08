@@ -2,11 +2,11 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `vacacionesAntiguasSimpleMejorada`(a
 BEGIN     
 declare idPais int;
 
-SET			     SQL_SAFE_UPDATES = 0;
-UPDATE 		   vacaciones
-SET          diasExcedidos=NULL,
-             diasRestantes=NULL WHERE estado
-             IN ('Rechazadas','Canceladas');
+SET			  SQL_SAFE_UPDATES = 0;
+UPDATE 		vacaciones
+SET       diasExcedidos=NULL,
+          diasRestantes=NULL WHERE estado
+          IN ('Rechazadas','Canceladas');
  
 select   	idCalendario from calendarios limit 1 into idPais;
 update   	vacaciones  
